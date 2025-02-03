@@ -6,6 +6,7 @@ import Comment from "../models/comment.model.js"
 import mongoose from "mongoose";
 import bcryptjs from 'bcryptjs'
 import cloudinary from "../config/cloudinary.js"
+import BlogLike from "../models/bloglike.model.js";
 
 export const getUser = async (req, res, next) => {
     try {
@@ -92,6 +93,7 @@ export const deleteUser = async (req, res, next) => {
         // const user = await User.findByIdAndDelete(id)
         await Comment.deleteMany({ user: id });// delete user along with comment and bllg
         await Blog.deleteMany({ author: id });
+        await BlogLike.deleteMany({author: id})
         await User.findByIdAndDelete(id);
         res.status(200).json({
             success: true,
@@ -103,23 +105,3 @@ export const deleteUser = async (req, res, next) => {
 }
 
 
-// import { handleError } from "../helpers/handleError.js";
-// import User from "../models/user.model.js";
-
-
-// export const getUser = async (req, res, next) => {
-//     try {
-//         const {userid} = req.params
-//         const user = await User.findOne({id: userid}).exec()//plain object me data pura mil jayga
-//         if(!user){
-//             next(handleError(404, 'User not found!'))
-//         }
-//         res.status(200).json({
-//             success: true,
-//             message: 'User data found',
-//             user
-//         })
-//     } catch (error) {
-//         next(handleError(500, error.message))
-//     }
-// }
