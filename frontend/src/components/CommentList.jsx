@@ -19,7 +19,7 @@ const CommentList = ({ props }) => {
     if (loading) return <div>Loading...</div>
     return (
         <div>
-            <h4 className='text-2xl font-bold'>
+            <h4 className='text-2xl font-bold ml-2'>
                 {
                     props.newComment ?
 
@@ -50,7 +50,7 @@ const CommentList = ({ props }) => {
                     &&
                     data.comments.map(comment => {
                         return (
-                            <div key={comment._id} className='flex gap-2 mb-3'>
+                            <div key={comment._id} className='flex gap-2 mb-3 ml-2'>
                                 <Avatar>
                                     <AvatarImage src={comment?.user?.avatar || usericon} />
                                 </Avatar>
