@@ -87,59 +87,55 @@ export const Login = async (req, res, next) => {
   }
 };
 
-
+  
 
   export const GoogleLogin = async (req, res, next) => {
     try {
-      const { name, email, avatar } = req.body;
-      // Log the request body to see the incoming data
-      
-      let user 
-      user = await User.findOne({ email });
-      
-      if (!user) {
-        //agar user nahi milta hai to user create krenge or us se pehle ek random password generate krke store kara lenge
-        const password =Math.random().toString()// ek aisehi random password generate kr rhe hai
-        const hashedPassword = bcryptjs.hashSync(password)
-        const newUser = new User({
-          name, email, password: hashedPassword, avatar
-        })
-        user = await newUser.save()
-      }
+        const { name, email, avatar } = req.body
+        let user
+        user = await User.findOne({ email })
+        if (!user) {
+            //  create new user 
+            const password = Math.random().toString()
+            const hashedPassword = bcryptjs.hashSync(password)
+            const newUser = new User({
+                name, email, password: hashedPassword, avatar
+            })
 
-     
-      // now user is valid create token
-      const token = jwt.sign(
-        {
-          _id: user._id,
-          name: user.name,
-          email: user.email,
-          avatar: user.avatar,
-          role:user.role
-        },
-        process.env.JWT_SECRET)
-      
-  
-      //session based login system
-      res.cookie("access_token", token, {
-        httpOnly: true,
-        secure: process.env.NODE_ENV === "production",
-        sameSite: process.env.NODE_ENV === "production" ? "none" : "strict",
-        path: '/'
-      });
-  
-      const newUser = user.toObject({ getters: true });
-      delete newUser.password;
-  
-      res.status(200).json({
-        success: true,
-        user : newUser,
-        message: "Login successfull!",
-      });
-    } catch (error) {
-      next(handleError(500, error.message));
+            user = await newUser.save()
+
+        }
+
+
+        const token = jwt.sign({
+            _id: user._id,
+            name: user.name,
+            email: user.email,
+            avatar: user.avatar,
+            role: user.role,
+        }, process.env.JWT_SECRET)
+
+
+        res.cookie('access_token', token, {
+            httpOnly: true,
+            secure: process.env.NODE_ENV === 'production',
+            sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'strict',
+            path: '/'
+        })
+
+        const newUser = user.toObject({ getters: true })
+        delete newUser.password
+        res.status(200).json({
+            success: true,
+            user: newUser,
+            message: 'Login successful.'
+        })
+      } catch (error) {
+        next(handleError(500, error.message))
     }
-  };
+}
+
+
   
 
   export const Logout = async (req, res, next) => {
@@ -161,3 +157,4 @@ export const Login = async (req, res, next) => {
         next(handleError(500, error.message))
     }
 }
+

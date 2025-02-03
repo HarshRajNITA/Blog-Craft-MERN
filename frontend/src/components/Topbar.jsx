@@ -71,11 +71,10 @@ const Topbar = () => {
           <AiOutlineMenu />
         </button>
         <Link to={RouteIndex}>
-        <img 
-  src={bgs} 
-  className="h-[45px] w-[110px] min-w-[100px] sm:h-[50px] sm:w-[140px] md:h-[55px] md:w-[160px] lg:h-[45px] lg:w-[130px] xl:h-[45px] xl:w-[100px] rounded-full" 
-/>
-
+          <img
+            src={bgs}
+            className="h-[45px] w-[110px] min-w-[100px] sm:h-[50px] sm:w-[140px] md:h-[55px] md:w-[160px] lg:h-[45px] lg:w-[130px] xl:h-[45px] xl:w-[100px] rounded-full"
+          />
         </Link>
       </div>
       <div className="w-[500px]">
