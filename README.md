@@ -53,10 +53,9 @@ With a clean and responsive design, Blog Craft offers a smooth and engaging read
 
 - Users can also browse related blogs and filter posts based on categories.
 
+<br>
 
-     <br>
-
-# 📌 **Live Site URL:** <a href="[https://weather-app-byharsh.netlify.app/](https://your-live-site-url.com](https://blog-craft-mern-pl28.vercel.app/)">**Click Here** 🚀</a>
+# 📌 **Live Site URL:** [**Click Here** 🚀](https://blog-craft-mern-pl28.vercel.app/)
 
 <br>
 
