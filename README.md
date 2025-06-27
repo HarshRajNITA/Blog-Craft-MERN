@@ -1,4 +1,4 @@
- ## ✨ Introduction
+ ## ✨  Blog Craft : A Blog Web Application.
  
 Welcome to Blog Craft : A blog web application.
 **Blog Craft** is a dynamic and user-friendly blog web application that lets users share their thoughts with the world.  
