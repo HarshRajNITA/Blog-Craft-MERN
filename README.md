@@ -52,3 +52,26 @@ With a clean and responsive design, Blog Craft offers a smooth and engaging read
   - Delete their own comments.
 
 - Users can also browse related blogs and filter posts based on categories.
+
+
+## 🔗 Live Demo
+
+[🚀 Click Here to Open Live Blog App]([https://your-live-site-url.com](https://blog-craft-mern-pl28.vercel.app/))
+
+
+<br>
+
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org)&nbsp;
+[![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)&nbsp;
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-0EA5E9?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com)&nbsp;
+[![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org)&nbsp;
+[![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com)&nbsp;
+[![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](https://mongodb.com)&nbsp;
+
+<br>
+
+
+
+## 📬 Connect With Me
+
+- **LinkedIn** - [Harsh Raj](https://www.linkedin.com/in/harsh-raj-78a3a414b/)
