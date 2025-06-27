@@ -1,12 +1,13 @@
+ ## ✨ Introduction
+ 
 Welcome to Blog Craft : A blog web application.
 **Blog Craft** is a dynamic and user-friendly blog web application that lets users share their thoughts with the world.  
 Users can seamlessly **register, log in**, and manage their own blog posts with ease — whether it’s creating, editing, or deleting content.  
-
 The platform also enables interaction through **likes and comments**, allows browsing through **related blogs**, and makes content discovery easier with **category-based filtering**.  
 With a clean and responsive design, Blog Craft offers a smooth and engaging reading and writing experience across all devices.
 
 
- ✨ **Features**
+ ## ✨ Features
 
 - 🧑‍💻 **User Authentication** – Sign up and login securely using JWT or Google Login.
 - 📝 **Create, Edit, Delete Blogs** – Full blog management
@@ -20,7 +21,7 @@ With a clean and responsive design, Blog Craft offers a smooth and engaging read
 - 🎨 **Modern UI** – Clean look with Shadcn + TailwindCSS
 
 
- 🛠️ **Tech Stacks**
+ ## 🛠️ Tech Stacks
 
 - **Frontend**: React, TailwindCSS, Shadcn UI  
 - **Backend**: Node.js, Express.js  
